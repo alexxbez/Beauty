@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The story, values, and people behind Maison Éclat, a small beauty atelier in Paris.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#5A2A3B">
+  <title>About — Maison Éclat</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+
+(function () {
+  try {
+    var saved = JSON.parse(window.localStorage.getItem("eclat-a11y") || "{}");
+    var root = document.documentElement;
+    if (saved.textSize != null) {
+      root.setAttribute("data-text-size", String(saved.textSize));
+    }
+    if (saved.easyFont) {
+      root.classList.add("easy-read");
+    }
+    var reduceMotion = saved.reduceMotion;
+    if (reduceMotion === undefined) {
+      reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    if (reduceMotion) {
+      root.classList.add("reduce-motion");
+    }
+    var highContrast = saved.highContrast;
+    if (highContrast === undefined) {
+      highContrast = window.matchMedia && window.matchMedia("(prefers-contrast: more)").matches;
+    }
+    if (highContrast) {
+      root.classList.add("high-contrast");
+    }
+  } catch (error) {
+    /* Storage can be unavailable; defaults still work. */
+  }
+})();
+
+  </script>
+  <script src="js/accessibility.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="background">
+<div id="page">
+<header id="header">
+  <div class="utility-bar">
+    <p class="utility-note">Beauty, practiced slowly · Est. 1998</p>
+    <a class="utility-link" href="accessibility.html">Accessibility</a>
+  </div>
+  <div class="brand">
+    <a class="brand-link" href="index.html">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-name">Maison <em>Éclat</em></span>
+      <span class="brand-sub">Beauty Atelier</span>
+    </a>
+  </div>
+  <nav id="navigation" aria-label="Primary">
+    <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="selected"><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="rituals.html">Rituals</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<noscript>
+  <p class="noscript-note">The interactive accessibility toolbar needs JavaScript. Browser zoom, reader mode, and your operating system’s accessibility settings still work. <a href="accessibility.html">Read the accessibility statement</a>.</p>
+</noscript>
+
+<main id="main" tabindex="-1">
+
+<section class="section" aria-labelledby="about-heading">
+  <div class="split split--wide">
+    <div>
+      <p class="eyebrow">Our story</p>
+      <h1 id="about-heading">A house built on stillness.</h1>
+      <p class="lede">Maison Éclat began in 1998 with a single treatment room, a pot of rose cream, and a belief that beauty should feel like relief.</p>
+      <p>Our founder, Élise Marchand, trained as a formulator before she trained as an aesthetician. That order still shapes everything we do: we begin with the skin, the scent, and the nervous system — not with a trend.</p>
+      <p>Today the atelier is still small by choice. We keep our appointment book generous, our formulations deliberate, and our door open to anyone who wants a quiet hour.</p>
+    </div>
+    <figure class="figure">
+      <img src="images/atelier.jpg" alt="A bright beauty salon interior with mirrors, styling chairs, and neutral finishes." width="1000" height="750" loading="lazy" decoding="async">
+      <figcaption>The atelier on Rue des Fleurs, Paris.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="values-heading">
+  <div class="section-head">
+    <p class="eyebrow">What we keep</p>
+    <h2 id="values-heading">Three quiet commitments.</h2>
+  </div>
+  <div class="values">
+    <article class="value">
+      <h3>Considered formulations</h3>
+      <p>Plant-led, small-batch, and transparent. We choose fewer ingredients and give each one a reason to be there.</p>
+    </article>
+    <article class="value">
+      <h3>Unhurried service</h3>
+      <p>No double bookings, no rushed consultations. Your appointment includes the time it actually takes.</p>
+    </article>
+    <article class="value">
+      <h3>Radical welcome</h3>
+      <p>Every body, every skin, every budget. Accessibility is not an add-on; it is part of our hospitality.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="timeline-heading">
+  <div class="section-head">
+    <p class="eyebrow">A short history</p>
+    <h2 id="timeline-heading">Measured in seasons.</h2>
+  </div>
+  <ol class="timeline">
+    <li>
+      <span class="timeline-year">1998</span>
+      <div>
+        <h3>The first room</h3>
+        <p>Élise opens a single treatment room in the Marais with a waiting list of twelve.</p>
+      </div>
+    </li>
+    <li>
+      <span class="timeline-year">2006</span>
+      <div>
+        <h3>The atelier</h3>
+        <p>The house moves to Rue des Fleurs and adds a small formulation kitchen.</p>
+      </div>
+    </li>
+    <li>
+      <span class="timeline-year">2014</span>
+      <div>
+        <h3>The collection</h3>
+        <p>Éclat No. 1 Serum is released after four years of quiet testing.</p>
+      </div>
+    </li>
+    <li>
+      <span class="timeline-year">2022</span>
+      <div>
+        <h3>A wider welcome</h3>
+        <p>We begin an accessibility review of every part of the atelier, from the doorway to the website.</p>
+      </div>
+    </li>
+    <li>
+      <span class="timeline-year">2026</span>
+      <div>
+        <h3>Still small</h3>
+        <p>The appointment book is open, the kettle is on, and the door is yours.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="section" aria-labelledby="team-heading">
+  <div class="section-head">
+    <p class="eyebrow">The people</p>
+    <h2 id="team-heading">A small, steady team.</h2>
+  </div>
+  <div class="profiles">
+    <article class="profile">
+      <div class="profile-mark" aria-hidden="true">ÉM</div>
+      <h3>Élise Marchand</h3>
+      <p class="profile-role">Founder &amp; Formulator</p>
+      <p>Élise still writes every formula by hand and still takes the first appointment on Tuesdays.</p>
+    </article>
+    <article class="profile">
+      <div class="profile-mark" aria-hidden="true">CL</div>
+      <h3>Camille Laurent</h3>
+      <p class="profile-role">Head of Rituals</p>
+      <p>Camille trained in Paris and Kyoto. She is the person to ask about skin that has been through a lot.</p>
+    </article>
+    <article class="profile">
+      <div class="profile-mark" aria-hidden="true">AB</div>
+      <h3>Aïcha Benali</h3>
+      <p class="profile-role">Director of Welcome</p>
+      <p>Aïcha makes sure every visit begins with the right question and ends with the right next step.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="about-access-heading">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Hospitality</p>
+      <h2 id="about-access-heading">A welcome that includes you.</h2>
+      <p class="lede">Step-free access, quiet appointments, large-print menus, and a website with its own accessibility tools. If you need something else, tell us — we will arrange it with you.</p>
+      <div class="button-row">
+        <a class="button button--ghost" href="accessibility.html">Read our accessibility statement</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h3>Plan your visit</h3>
+      <p>If you have an access requirement, email <a href="mailto:accessibility@maisoneclat.example">accessibility@maisoneclat.example</a> or mention it in your enquiry. We will reply within five working days.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="brand-name">Maison <em>Éclat</em></span>
+      <p>A quiet atelier for skin, scent, and ceremony. Beauty, practiced slowly.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rituals.html">Rituals</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="journal.html">Journal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Visit</h3>
+      <p>14 Rue des Fleurs<br>75003 Paris</p>
+      <p>Tuesday–Saturday<br>10:00–19:00</p>
+      <p><a href="tel:+33184000000">+33 1 84 00 00 00</a></p>
+    </div>
+    <div class="footer-col">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="mailto:bonjour@maisoneclat.example">Email</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Maison Éclat. All rights reserved.</p>
+    <p>Beauty, practiced slowly. <a href="#main">Back to top ↑</a></p>
+  </div>
+</footer>
+</div>
+</div>
+<div class="a11y">
+  <button class="a11y-toggle" type="button" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="4" r="2"/><path d="M4 8h16M12 8v6M8 21l4-7 4 7"/></svg>
+    <span>Accessibility</span>
+  </button>
+  <section class="a11y-panel" id="a11y-panel" aria-labelledby="a11y-title" hidden>
+    <div class="a11y-panel-head">
+      <h2 id="a11y-title">Accessibility</h2>
+      <button class="a11y-close" type="button" id="a11y-close" aria-label="Close accessibility settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <p class="panel-sub">Adjust the site to suit you. Your choices are saved on this device.</p>
+
+    <div class="a11y-group">
+      <h3>Text</h3>
+      <div class="a11y-row">
+        <span id="a11y-size-label">Text size</span>
+        <div class="a11y-actions" role="group" aria-labelledby="a11y-size-label">
+          <button class="a11y-btn" type="button" data-size-step="-1" aria-label="Decrease text size">A−</button>
+          <output class="a11y-size-value" id="a11y-size-value">100%</output>
+          <button class="a11y-btn" type="button" data-size-step="1" aria-label="Increase text size">A+</button>
+        </div>
+      </div>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-easy-font">
+          <input type="checkbox" id="a11y-easy-font">
+          <span>Easy-read font</span>
+        </label>
+      </div>
+      <p class="a11y-status">Switches the decorative serif to a clear sans-serif.</p>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Display</h3>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-contrast">
+          <input type="checkbox" id="a11y-contrast">
+          <span>High contrast</span>
+        </label>
+      </div>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-motion">
+          <input type="checkbox" id="a11y-motion">
+          <span>Reduce motion</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Audio</h3>
+      <div class="a11y-row">
+        <button class="a11y-btn" type="button" id="a11y-read">Read this page</button>
+        <button class="a11y-btn" type="button" id="a11y-stop" disabled>Stop</button>
+      </div>
+      <p class="a11y-status" id="a11y-audio-note">Read aloud uses your browser’s speech voice.</p>
+    </div>
+
+    <div class="a11y-group">
+      <button class="a11y-btn a11y-reset" type="button" id="a11y-reset">Reset all settings</button>
+      <p class="a11y-status"><a href="accessibility.html">Read the accessibility statement</a></p>
+    </div>
+  </section>
+</div>
+<div class="sr-only" aria-live="polite" id="a11y-status"></div>
+</body>
+</html>

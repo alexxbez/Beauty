@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Maison Éclat in Paris. Send an enquiry, plan a visit, or ask about access requirements.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#5A2A3B">
+  <title>Contact — Maison Éclat</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+
+(function () {
+  try {
+    var saved = JSON.parse(window.localStorage.getItem("eclat-a11y") || "{}");
+    var root = document.documentElement;
+    if (saved.textSize != null) {
+      root.setAttribute("data-text-size", String(saved.textSize));
+    }
+    if (saved.easyFont) {
+      root.classList.add("easy-read");
+    }
+    var reduceMotion = saved.reduceMotion;
+    if (reduceMotion === undefined) {
+      reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    if (reduceMotion) {
+      root.classList.add("reduce-motion");
+    }
+    var highContrast = saved.highContrast;
+    if (highContrast === undefined) {
+      highContrast = window.matchMedia && window.matchMedia("(prefers-contrast: more)").matches;
+    }
+    if (highContrast) {
+      root.classList.add("high-contrast");
+    }
+  } catch (error) {
+    /* Storage can be unavailable; defaults still work. */
+  }
+})();
+
+  </script>
+  <script src="js/accessibility.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="background">
+<div id="page">
+<header id="header">
+  <div class="utility-bar">
+    <p class="utility-note">Beauty, practiced slowly · Est. 1998</p>
+    <a class="utility-link" href="accessibility.html">Accessibility</a>
+  </div>
+  <div class="brand">
+    <a class="brand-link" href="index.html">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-name">Maison <em>Éclat</em></span>
+      <span class="brand-sub">Beauty Atelier</span>
+    </a>
+  </div>
+  <nav id="navigation" aria-label="Primary">
+    <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rituals.html">Rituals</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li class="selected"><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<noscript>
+  <p class="noscript-note">The interactive accessibility toolbar needs JavaScript. Browser zoom, reader mode, and your operating system’s accessibility settings still work. <a href="accessibility.html">Read the accessibility statement</a>.</p>
+</noscript>
+
+<main id="main" tabindex="-1">
+
+<section class="section" aria-labelledby="contact-heading">
+  <div class="section-head">
+    <p class="eyebrow">Contact</p>
+    <h1 id="contact-heading">We would be glad to welcome you.</h1>
+    <p class="lede">Tell us a little about what you are looking for. We will reply with a suggestion, a time, or a gentle question.</p>
+  </div>
+
+  <div class="contact-layout">
+    <div>
+      <h2>Send an enquiry</h2>
+      <p class="small">Fields marked “required” must be completed. This demonstration form does not send data; a direct email link is provided below.</p>
+
+      <form class="enquiry-form" id="enquiry-form" action="mailto:bonjour@maisoneclat.example" method="post" enctype="text/plain">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="small">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="interest">I am interested in</label>
+            <select id="interest" name="interest">
+              <option value="">Please choose</option>
+              <option value="facial">A facial</option>
+              <option value="hair">Hair</option>
+              <option value="makeup">Makeup</option>
+              <option value="body">A body ritual</option>
+              <option value="bridal">Bridal or occasion</option>
+              <option value="grooming">Grooming</option>
+              <option value="products">Products</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Preferred date <span class="small">(optional)</span></label>
+            <input type="date" id="date" name="date">
+          </div>
+          <div class="field field--full">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="6" aria-describedby="message-hint dictation-note" required></textarea>
+            <p class="hint" id="message-hint">Include anything that would help us prepare: skin concerns, access requirements, or the occasion.</p>
+            <button class="dictate-btn" type="button" id="a11y-dictate" aria-pressed="false" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg>
+              <span class="dictate-label">Dictate message</span>
+            </button>
+            <p class="hint" id="dictation-note" hidden>Dictation uses your browser’s speech service. You can always type instead.</p>
+          </div>
+          <div class="field field--full">
+            <div class="checkbox-field">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">I agree to be contacted about this enquiry. <span aria-hidden="true">*</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="button" type="submit">Send enquiry</button>
+          <p class="small">Prefer email? Write to <a href="mailto:bonjour@maisoneclat.example">bonjour@maisoneclat.example</a>.</p>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <aside aria-label="Atelier details">
+      <div class="contact-card">
+        <h2>The atelier</h2>
+        <ul class="contact-list">
+          <li><strong>Address</strong>14 Rue des Fleurs<br>75003 Paris</li>
+          <li><strong>Telephone</strong><a href="tel:+33184000000">+33 1 84 00 00 00</a></li>
+          <li><strong>Email</strong><a href="mailto:bonjour@maisoneclat.example">bonjour@maisoneclat.example</a></li>
+          <li><strong>Hours</strong>Tuesday–Saturday, 10:00–19:00<br>Sunday by appointment<br>Closed Monday</li>
+        </ul>
+        <p class="contact-note">Step-free access is available from the courtyard entrance. If you have an access requirement, email <a href="mailto:accessibility@maisoneclat.example">accessibility@maisoneclat.example</a> and we will plan the visit with you.</p>
+      </div>
+
+      <div class="map-card">
+        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="map-title map-desc" focusable="false">
+          <title id="map-title">Stylised map of the atelier</title>
+          <desc id="map-desc">A simple map showing Rue des Fleurs in Paris, with the atelier marked near the courtyard entrance.</desc>
+          <rect width="400" height="220" fill="#f3ece1"/>
+          <g stroke="#d9cbb8" stroke-width="8" fill="none">
+            <path d="M-20 60h440M-20 150h440M70 -20v260M300 -20v260"/>
+          </g>
+          <g stroke="#fbf7f1" stroke-width="2" fill="none" opacity="0.8">
+            <path d="M-20 60h440M-20 150h440M70 -20v260M300 -20v260"/>
+          </g>
+          <path d="M70 60h230" stroke="#b08a4f" stroke-width="2" stroke-dasharray="6 6"/>
+          <circle cx="185" cy="105" r="16" fill="#5a2a3b"/>
+          <circle cx="185" cy="105" r="5" fill="#fbf7f1"/>
+          <path d="M185 121v18" stroke="#5a2a3b" stroke-width="2"/>
+          <text x="210" y="110" font-family="Georgia, serif" font-size="14" fill="#5a2a3b">Maison Éclat</text>
+          <text x="78" y="52" font-family="Helvetica, Arial, sans-serif" font-size="9" letter-spacing="2" fill="#6b5e55">RUE DES FLEURS</text>
+        </svg>
+        <p>Métro: Saint-Sébastien – Froissart (line 8). The courtyard entrance is step-free.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="brand-name">Maison <em>Éclat</em></span>
+      <p>A quiet atelier for skin, scent, and ceremony. Beauty, practiced slowly.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rituals.html">Rituals</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="journal.html">Journal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Visit</h3>
+      <p>14 Rue des Fleurs<br>75003 Paris</p>
+      <p>Tuesday–Saturday<br>10:00–19:00</p>
+      <p><a href="tel:+33184000000">+33 1 84 00 00 00</a></p>
+    </div>
+    <div class="footer-col">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="mailto:bonjour@maisoneclat.example">Email</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Maison Éclat. All rights reserved.</p>
+    <p>Beauty, practiced slowly. <a href="#main">Back to top ↑</a></p>
+  </div>
+</footer>
+</div>
+</div>
+<div class="a11y">
+  <button class="a11y-toggle" type="button" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="4" r="2"/><path d="M4 8h16M12 8v6M8 21l4-7 4 7"/></svg>
+    <span>Accessibility</span>
+  </button>
+  <section class="a11y-panel" id="a11y-panel" aria-labelledby="a11y-title" hidden>
+    <div class="a11y-panel-head">
+      <h2 id="a11y-title">Accessibility</h2>
+      <button class="a11y-close" type="button" id="a11y-close" aria-label="Close accessibility settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <p class="panel-sub">Adjust the site to suit you. Your choices are saved on this device.</p>
+
+    <div class="a11y-group">
+      <h3>Text</h3>
+      <div class="a11y-row">
+        <span id="a11y-size-label">Text size</span>
+        <div class="a11y-actions" role="group" aria-labelledby="a11y-size-label">
+          <button class="a11y-btn" type="button" data-size-step="-1" aria-label="Decrease text size">A−</button>
+          <output class="a11y-size-value" id="a11y-size-value">100%</output>
+          <button class="a11y-btn" type="button" data-size-step="1" aria-label="Increase text size">A+</button>
+        </div>
+      </div>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-easy-font">
+          <input type="checkbox" id="a11y-easy-font">
+          <span>Easy-read font</span>
+        </label>
+      </div>
+      <p class="a11y-status">Switches the decorative serif to a clear sans-serif.</p>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Display</h3>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-contrast">
+          <input type="checkbox" id="a11y-contrast">
+          <span>High contrast</span>
+        </label>
+      </div>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-motion">
+          <input type="checkbox" id="a11y-motion">
+          <span>Reduce motion</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Audio</h3>
+      <div class="a11y-row">
+        <button class="a11y-btn" type="button" id="a11y-read">Read this page</button>
+        <button class="a11y-btn" type="button" id="a11y-stop" disabled>Stop</button>
+      </div>
+      <p class="a11y-status" id="a11y-audio-note">Read aloud uses your browser’s speech voice.</p>
+    </div>
+
+    <div class="a11y-group">
+      <button class="a11y-btn a11y-reset" type="button" id="a11y-reset">Reset all settings</button>
+      <p class="a11y-status"><a href="accessibility.html">Read the accessibility statement</a></p>
+    </div>
+  </section>
+</div>
+<div class="sr-only" aria-live="polite" id="a11y-status"></div>
+</body>
+</html>

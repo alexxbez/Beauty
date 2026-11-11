@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessibility tools and our WCAG 2.2 Level AA commitment at Maison Éclat.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#5A2A3B">
+  <title>Accessibility — Maison Éclat</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+
+(function () {
+  try {
+    var saved = JSON.parse(window.localStorage.getItem("eclat-a11y") || "{}");
+    var root = document.documentElement;
+    if (saved.textSize != null) {
+      root.setAttribute("data-text-size", String(saved.textSize));
+    }
+    if (saved.easyFont) {
+      root.classList.add("easy-read");
+    }
+    var reduceMotion = saved.reduceMotion;
+    if (reduceMotion === undefined) {
+      reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    if (reduceMotion) {
+      root.classList.add("reduce-motion");
+    }
+    var highContrast = saved.highContrast;
+    if (highContrast === undefined) {
+      highContrast = window.matchMedia && window.matchMedia("(prefers-contrast: more)").matches;
+    }
+    if (highContrast) {
+      root.classList.add("high-contrast");
+    }
+  } catch (error) {
+    /* Storage can be unavailable; defaults still work. */
+  }
+})();
+
+  </script>
+  <script src="js/accessibility.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="background">
+<div id="page">
+<header id="header">
+  <div class="utility-bar">
+    <p class="utility-note">Beauty, practiced slowly · Est. 1998</p>
+    <a class="utility-link" href="accessibility.html">Accessibility</a>
+  </div>
+  <div class="brand">
+    <a class="brand-link" href="index.html">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-name">Maison <em>Éclat</em></span>
+      <span class="brand-sub">Beauty Atelier</span>
+    </a>
+  </div>
+  <nav id="navigation" aria-label="Primary">
+    <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rituals.html">Rituals</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<noscript>
+  <p class="noscript-note">The interactive accessibility toolbar needs JavaScript. Browser zoom, reader mode, and your operating system’s accessibility settings still work. <a href="accessibility.html">Read the accessibility statement</a>.</p>
+</noscript>
+
+<main id="main" tabindex="-1">
+
+<section class="section" aria-labelledby="a11y-page-heading">
+  <div class="section-head">
+    <p class="eyebrow">Accessibility</p>
+    <h1 id="a11y-page-heading">A welcome that includes you.</h1>
+    <p class="lede">We want Maison Éclat to be a place — and a website — that more people can use comfortably. This page explains the tools available and how to reach us if something is not working.</p>
+  </div>
+
+  <div class="split">
+    <div>
+      <h2>Our commitment</h2>
+      <p>We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA. That is a target, not a claim of perfection. We review the site regularly, test it with keyboard navigation and screen readers, and fix what we find.</p>
+      <p>Accessibility is part of our hospitality, not a separate project. The same care that goes into a quiet treatment room goes into clear headings, visible focus, readable text, and honest alternatives.</p>
+    </div>
+    <div class="contact-card">
+      <h3>At a glance</h3>
+      <ul class="contact-list">
+        <li><strong>Target</strong>WCAG 2.2 Level AA</li>
+        <li><strong>Last reviewed</strong>November 2026</li>
+        <li><strong>Feedback</strong><a href="mailto:accessibility@maisoneclat.example">accessibility@maisoneclat.example</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="tools-heading">
+  <div class="section-head">
+    <p class="eyebrow">Tools on this site</p>
+    <h2 id="tools-heading">Adjust the page to suit you.</h2>
+    <p class="lede">Open the <strong>Accessibility</strong> button at the bottom-right of any page. Your choices are saved on this device and follow you between pages.</p>
+  </div>
+  <ul class="a11y-features">
+    <li class="a11y-feature">
+      <h3>Easy-read font</h3>
+      <p>Replaces the decorative serif with a clear sans-serif, removes decorative italics, and opens up the line spacing.</p>
+    </li>
+    <li class="a11y-feature">
+      <h3>Text size</h3>
+      <p>Five steps from 100% to 140%. The current size is announced as you change it.</p>
+    </li>
+    <li class="a11y-feature">
+      <h3>High contrast</h3>
+      <p>Black text on white surfaces, stronger borders, underlined links, and a highly visible focus ring.</p>
+    </li>
+    <li class="a11y-feature">
+      <h3>Reduce motion</h3>
+      <p>Stops transitions and smooth scrolling. The site also respects your system’s reduced-motion setting on first visit.</p>
+    </li>
+    <li class="a11y-feature">
+      <h3>Read aloud</h3>
+      <p>Reads the main content using your browser’s speech voice. Select a passage first to hear only that passage.</p>
+    </li>
+    <li class="a11y-feature">
+      <h3>Voice dictation</h3>
+      <p>On the contact page, a microphone button adds spoken words to the message field. Availability depends on your browser.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="section" aria-labelledby="keyboard-heading">
+  <div class="section-head">
+    <p class="eyebrow">Keyboard and screen reader</p>
+    <h2 id="keyboard-heading">A clear path through the page.</h2>
+  </div>
+  <div class="grid-2">
+    <div>
+      <h3>Keyboard</h3>
+      <ul>
+        <li><strong>Tab</strong> moves through links, buttons, and form fields.</li>
+        <li><strong>Shift + Tab</strong> moves backwards.</li>
+        <li><strong>Enter</strong> or <strong>Space</strong> activates a button.</li>
+        <li><strong>Escape</strong> closes the accessibility panel.</li>
+        <li>The first link on every page is <strong>Skip to main content</strong>.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Screen readers</h3>
+      <p>The site uses one main landmark, one primary navigation landmark, logical headings, descriptive link text, and labelled form fields. Decorative artwork is hidden from assistive technology; meaningful images have text alternatives.</p>
+      <p>If a label, heading, or announcement does not make sense with your screen reader, please tell us. That is useful information, not a complaint.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="support-heading">
+  <div class="section-head">
+    <p class="eyebrow">Browser support</p>
+    <h2 id="support-heading">What works where.</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <caption>Support for the accessibility tools in current browsers. “Varies” means the feature may depend on the operating system or browser settings.</caption>
+      <thead>
+        <tr>
+          <th scope="col">Tool</th>
+          <th scope="col">Support</th>
+          <th scope="col">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Easy-read font, text size, high contrast, reduced motion</th>
+          <td>All modern browsers</td>
+          <td>Built with HTML, CSS, and a small amount of JavaScript for saving preferences.</td>
+        </tr>
+        <tr>
+          <th scope="row">Read aloud</th>
+          <td>Most modern browsers</td>
+          <td>Uses the browser’s speech synthesis. Voice availability and quality vary by device.</td>
+        </tr>
+        <tr>
+          <th scope="row">Voice dictation</th>
+          <td>Varies</td>
+          <td>Best supported in Chromium-based browsers. If unavailable, the message field always works by typing.</td>
+        </tr>
+        <tr>
+          <th scope="row">Form validation</th>
+          <td>All modern browsers</td>
+          <td>Uses native HTML validation with visible labels and hints.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="limits-heading">
+  <div class="section-head">
+    <p class="eyebrow">Known limitations</p>
+    <h2 id="limits-heading">Where we are still working.</h2>
+  </div>
+  <ul>
+    <li>The contact form is a demonstration. It validates your details and shows a confirmation, but it does not send a message. Use the direct email link to reach us.</li>
+    <li>Voice dictation and read aloud depend on browser and operating-system support. They are enhancements, not requirements for using the site.</li>
+    <li>Speech recognition may send audio to your browser vendor for processing. If that is not comfortable, typing is always available.</li>
+    <li>The photographs carry descriptive alternative text. Decorative icons are hidden from assistive technology, and the stylised map has a text description.</li>
+    <li>We do not use third-party advertising, analytics, or tracking scripts.</li>
+  </ul>
+</section>
+
+<section class="section section--tight" aria-labelledby="feedback-heading">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Feedback</p>
+      <h2 id="feedback-heading">Tell us what would help.</h2>
+      <p class="lede">If you meet a barrier on this site, or if something could be clearer, please write to us. We aim to reply within five working days and will tell you what we can change.</p>
+      <div class="button-row">
+        <a class="button" href="mailto:accessibility@maisoneclat.example">Email accessibility</a>
+        <a class="button button--ghost" href="contact.html">Use the contact form</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h3>By post</h3>
+      <p>Maison Éclat<br>14 Rue des Fleurs<br>75003 Paris<br>France</p>
+      <p class="small">Please mark envelopes “Accessibility feedback”.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="brand-name">Maison <em>Éclat</em></span>
+      <p>A quiet atelier for skin, scent, and ceremony. Beauty, practiced slowly.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rituals.html">Rituals</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="journal.html">Journal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Visit</h3>
+      <p>14 Rue des Fleurs<br>75003 Paris</p>
+      <p>Tuesday–Saturday<br>10:00–19:00</p>
+      <p><a href="tel:+33184000000">+33 1 84 00 00 00</a></p>
+    </div>
+    <div class="footer-col">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="mailto:bonjour@maisoneclat.example">Email</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Maison Éclat. All rights reserved.</p>
+    <p>Beauty, practiced slowly. <a href="#main">Back to top ↑</a></p>
+  </div>
+</footer>
+</div>
+</div>
+<div class="a11y">
+  <button class="a11y-toggle" type="button" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="4" r="2"/><path d="M4 8h16M12 8v6M8 21l4-7 4 7"/></svg>
+    <span>Accessibility</span>
+  </button>
+  <section class="a11y-panel" id="a11y-panel" aria-labelledby="a11y-title" hidden>
+    <div class="a11y-panel-head">
+      <h2 id="a11y-title">Accessibility</h2>
+      <button class="a11y-close" type="button" id="a11y-close" aria-label="Close accessibility settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <p class="panel-sub">Adjust the site to suit you. Your choices are saved on this device.</p>
+
+    <div class="a11y-group">
+      <h3>Text</h3>
+      <div class="a11y-row">
+        <span id="a11y-size-label">Text size</span>
+        <div class="a11y-actions" role="group" aria-labelledby="a11y-size-label">
+          <button class="a11y-btn" type="button" data-size-step="-1" aria-label="Decrease text size">A−</button>
+          <output class="a11y-size-value" id="a11y-size-value">100%</output>
+          <button class="a11y-btn" type="button" data-size-step="1" aria-label="Increase text size">A+</button>
+        </div>
+      </div>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-easy-font">
+          <input type="checkbox" id="a11y-easy-font">
+          <span>Easy-read font</span>
+        </label>
+      </div>
+      <p class="a11y-status">Switches the decorative serif to a clear sans-serif.</p>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Display</h3>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-contrast">
+          <input type="checkbox" id="a11y-contrast">
+          <span>High contrast</span>
+        </label>
+      </div>
+      <div class="a11y-row">
+        <label class="a11y-switch" for="a11y-motion">
+          <input type="checkbox" id="a11y-motion">
+          <span>Reduce motion</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Audio</h3>
+      <div class="a11y-row">
+        <button class="a11y-btn" type="button" id="a11y-read">Read this page</button>
+        <button class="a11y-btn" type="button" id="a11y-stop" disabled>Stop</button>
+      </div>
+      <p class="a11y-status" id="a11y-audio-note">Read aloud uses your browser’s speech voice.</p>
+    </div>
+
+    <div class="a11y-group">
+      <button class="a11y-btn a11y-reset" type="button" id="a11y-reset">Reset all settings</button>
+      <p class="a11y-status"><a href="accessibility.html">Read the accessibility statement</a></p>
+    </div>
+  </section>
+</div>
+<div class="sr-only" aria-live="polite" id="a11y-status"></div>
+</body>
+</html>
